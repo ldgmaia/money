@@ -1,0 +1,20 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Anything",
+      "type": "income",
+      "category": "Sell",
+      "price": 12500,
+      "createdAt": "2022-11-22T17:39:11.526Z"
+    },
+    {
+      "id": 2,
+      "description": "Anything 2",
+      "type": "outcome",
+      "category": "Food",
+      "price": 125,
+      "createdAt": "2022-11-21T17:39:11.526Z"
+    }
+  ]
+}

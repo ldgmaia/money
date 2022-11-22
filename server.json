@@ -5,7 +5,7 @@
       "description": "Anything",
       "type": "income",
       "category": "Sell",
-      "price": 12500,
+      "price": 100,
       "createdAt": "2022-11-22T17:39:11.526Z"
     },
     {
@@ -13,8 +13,24 @@
       "description": "Anything 2",
       "type": "outcome",
       "category": "Food",
-      "price": 125,
+      "price": 35,
       "createdAt": "2022-11-21T17:39:11.526Z"
+    },
+    {
+      "id": 3,
+      "description": "Anything",
+      "type": "income",
+      "category": "Sell",
+      "price": 100,
+      "createdAt": "2022-11-20T17:39:11.526Z"
+    },
+    {
+      "id": 4,
+      "description": "Anything",
+      "type": "outcome",
+      "category": "Sell",
+      "price": 50,
+      "createdAt": "2022-11-20T17:39:11.526Z"
     }
   ]
 }

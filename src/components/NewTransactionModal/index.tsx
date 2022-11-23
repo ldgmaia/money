@@ -1,9 +1,13 @@
-import * as Dialog from '@radix-ui/react-dialog'
 import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
-import * as z from 'zod'
+import { memo } from 'react'
 import { useForm, Controller } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
+import { useContextSelector } from 'use-context-selector'
+import * as z from 'zod'
 
+import { zodResolver } from '@hookform/resolvers/zod'
+import * as Dialog from '@radix-ui/react-dialog'
+
+import { TransactionsContext } from '../../contexts/TransactionsContext'
 import {
   CloseButton,
   Content,
@@ -21,8 +25,16 @@ const newTransactionFormSchema = z.object({
 
 type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>
 
-export function NewTransactionModal() {
+function NewTransactionModalComponent() {
+  const createTransaction = useContextSelector(
+    TransactionsContext,
+    (context) => {
+      return context.createTransaction
+    },
+  )
+
   const {
+    reset,
     control,
     register,
     handleSubmit,
@@ -32,8 +44,16 @@ export function NewTransactionModal() {
   })
 
   async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    console.log(data)
+    // await new Promise((resolve) => setTimeout(resolve, 2000))
+    const { description, category, price, type } = data
+    await createTransaction({
+      description,
+      category,
+      price,
+      type,
+    })
+
+    reset()
   }
 
   return (
@@ -96,3 +116,5 @@ export function NewTransactionModal() {
     </Dialog.Portal>
   )
 }
+
+export const NewTransactionModal = memo(NewTransactionModalComponent)

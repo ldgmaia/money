@@ -2,7 +2,7 @@
   "transactions": [
     {
       "id": 1,
-      "description": "Anything",
+      "description": "Website",
       "type": "income",
       "category": "Sell",
       "price": 100,
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "description": "Anything 2",
+      "description": "Hamburger 2",
       "type": "outcome",
       "category": "Food",
       "price": 35,
@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "description": "Anything",
+      "description": "Cheeseburger",
       "type": "income",
       "category": "Sell",
       "price": 100,
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "description": "Anything",
+      "description": "Noodles",
       "type": "outcome",
       "category": "Sell",
       "price": 50,
